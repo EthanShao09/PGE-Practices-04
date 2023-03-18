@@ -92,8 +92,8 @@ def task01( L ):
     pass
 
 '''
-# ------------------------------------------------------------------------------
-Task02
+ ------------------------------------------------------------------------------
+#Task02
 
 Qualities of Local Minima
 
@@ -157,7 +157,7 @@ def task02( L ):
 
 '''
 
-Task 03
+#Task 03
 
 A **subarray** S of an array A is a slice of array A.
 (The term subarray is more general then the term slice used 
@@ -191,9 +191,9 @@ def task03( L ):
     # your solution here
     pass
 
-# ------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------
 '''
-Task 04
+#Task 04
 
 An subarray S in array A array is loosely ascending 
 when it contains at most one item which value is bigger then the value
@@ -224,7 +224,7 @@ def task04( L ):
     pass
 
 
-# ------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------
 # Task 05
 
 '''
@@ -299,7 +299,7 @@ def task05( targets, shots ):
     # your solution here
     pass
 
-# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #               I N P U T    R E A D I N G
 taskNo = int(input())
 Nlists = int(input())
@@ -308,7 +308,7 @@ for k in range(Nlists):
     oneList = list(map(int, input().split()))
     inputLists.append(oneList)
 
-# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #             P R O C E S S I N G
 
 t1 = time.time()
@@ -323,4 +323,4 @@ if taskNo == 5:
         task05(inputLists[i], inputLists[i + 1])
 
 t2 = time.time()
-# print( 'time', str(t2-t1)[:5] )
+ print( 'time', str(t2-t1)[:5] )
