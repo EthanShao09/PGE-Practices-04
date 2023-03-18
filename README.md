@@ -93,7 +93,7 @@ def task01( L ):
 
 '''
  ------------------------------------------------------------------------------
-#Task02
+# Task02
 
 Qualities of Local Minima
 
@@ -157,7 +157,7 @@ def task02( L ):
 
 '''
 
-#Task 03
+# Task 03
 
 A **subarray** S of an array A is a slice of array A.
 (The term subarray is more general then the term slice used 
@@ -193,7 +193,7 @@ def task03( L ):
 
  ------------------------------------------------------------------------------
 '''
-#Task 04
+# Task 04
 
 An subarray S in array A array is loosely ascending 
 when it contains at most one item which value is bigger then the value
