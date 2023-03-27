@@ -74,6 +74,7 @@ def task02(aList):
 
 
 def task03(aList):
+
     arr = []
     hSum = round(sum(aList) / 2)
     for i in range(len(aList)):
@@ -138,9 +139,62 @@ def task04(aList):
     print(*P)
 
 
-def task05(aList):
-    pass
+'''
+Examples of some shots qualities:
+          10       20        30        40        50        60
+0123456789012345678901234567890123456789012345678901234567890   indexes
+-----o-o----o--o-oo---o---o---------o-----------o---oo------- 
+...*..........| 0                                               Shot A range and quality 0
+........*..........| 6                                          Shot B range and quality 6
+    |..........*..........| 8                                   Shot C range and quality 8
+            |..........*..........| 6                           Shot D range and quality 6
+             |..........*..........| 0                          Shot E range and quality 0
+                          |..........*..........| 0             Shot E range and quality 0
+                                |..........*..........| 0       Shot G range and quality 0   
+---*----*------*-------**------------*-----*--***------------   shots
+   A    B      C       DE            F     G  HIJ
+   
+  Input
+5
+2
+5 7 12 15 17 18 22 26 36 48 52 53
+3 8 15 23 24 37 43 46 47 48
+  Output
+20
 
+'''
+
+
+def task05(targets, shots):
+    span = targets[-1] - targets[0] + 1
+    width = (shots[-1] - shots[0] + 1) // 2
+    '先求出目标span和射击的有效宽度'
+    num_T = len(targets) // 2  # 至少打到一半的目标数
+    L = (width - 1) / 2  # shots半径
+    all = 0
+
+    for i in shots:
+        l = []
+        for j in targets:
+            dist = abs(j - i)
+            if dist <= L:
+                l.append(j)
+        if len(l) >= 6:
+            all = all + len(l)
+
+    print(all)
+    '''
+
+    print("================================")
+    print(targets)
+    print(span)
+    print(shots)
+    print(width)
+    print("================================")
+    print(len(targets))
+    print(num_T)
+    print(L)
+'''
 
 if __name__ == '__main__':
     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -167,4 +221,4 @@ if __name__ == '__main__':
             task05(inputLists[i], inputLists[i + 1])
 
     t2 = time.time()
-    # print( 'time', str(t2-t1)[:5] )
+    print('time', str(t2 - t1)[:5])
